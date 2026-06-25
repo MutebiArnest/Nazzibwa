@@ -10,14 +10,14 @@ class Transaction:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
-            print(f"Deposited: ${amount:.2f}")
+            print(f"Deposited: UGX {amount:.2f}")
         else:
             print("Deposit amount must be positive.")
 
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
             self.balance -= amount
-            print(f"Withdrawn: ${amount:.2f}")
+            print(f"Withdrawn: UGX {amount:.2f}")
         else:
             print("Invalid withdrawal amount.")
 
@@ -25,7 +25,7 @@ class Transaction:
         if 0 < amount <= self.balance:
             self.balance -= amount
             target_account.balance += amount
-            print(f"Transferred: ${amount:.2f} to Account {target_account.account_number}")
+            print(f"Transferred: UGX {amount:.2f} to Account {target_account.account_number}")
         else:
             print("Invalid transfer amount.")
 class Deposit(Transaction):
